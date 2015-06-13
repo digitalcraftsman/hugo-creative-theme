@@ -2,9 +2,9 @@
 <header>
     <div class="header-content">
         <div class="header-content-inner">
-            <h1>{{ with .Site.Params.hero.headline }}{{ . }}{{ end }}</h1>
+            <h1>{{ with .Site.Params.hero.slogan }}{{ . }}{{ end }}</h1>
             <hr>
-            <p>{{ with .Site.Params.hero.description }}{{ . | markdownify }}{{ end }}</p>
+            <p>{{ with .Site.Params.hero.subtitle }}{{ . | markdownify }}{{ end }}</p>
             <a href="#about" class="btn btn-primary btn-xl page-scroll">{{ with .Site.Params.hero.buttonText }}{{ . }}{{ end }}</a>
         </div>
     </div>
