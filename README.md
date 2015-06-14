@@ -53,9 +53,11 @@ This section should show your capabilities and skills. You can change the servic
 
 The array below contains all information of your services. All icons are represented by the first index of the arrays. Those are CSS classes of the Fontawesome icon set. You can find more icons under at the their [project website](//fortawesome.github.io/Font-Awesome/icons). The following indexes are the service title and a short description.
 
-     list = [
-        ["icon", "title", "description"]
-    ]
+```toml
+list = [
+    ["icon", "title", "description"]
+]
+```
 
 ### Create your portfolio
 
@@ -85,7 +87,7 @@ To give your projects an image, save those under [`static/img/portfolio`](//gith
 
 In order to see your site in action, run Hugo's built-in local server. 
 
-        $ hugo server -w
+    $ hugo server -w
 
 Now enter `localhost:1313` in the address bar of your browser.
 
