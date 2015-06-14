@@ -11,6 +11,7 @@ Creative Theme is a one page portfolio for creatives based on the [original Boot
 - [Getting started](#getting-started)
   - [The config file](#the-config-file)
   - [Change the hero background](#change-the-hero-background)
+  - [Add your services](#add-your-services)
   - [Create your portfolio](#create-your-portfolio)
   - [Nearly finished](#nearly-finished)
 - [Contributing](#contributing)
@@ -45,6 +46,14 @@ To use it, copy the [`config.toml`](//github.com/digitalcraftsman/hugo-creative-
 
 The hero acts as an eye-catcher for your site. So consider to give him a nice background. You just need to replace the [`header.jpg`](//github.com/digitalcraftsman/hugo-creative-theme/blob/master/static/img/header.jpg) at [`static/img`](//github.com/digitalcraftsman/hugo-creative-theme/tree/master/static/img) with your own. But it's important that you use the same filename.
 
+
+### Add your services
+
+This section should show your capabilities and skills. You can change the services under `[params.services]` in the [`config.toml`](//github.com/digitalcraftsman/hugo-creative-theme/blob/dev/examples/config.toml).
+
+The array below contains all information of your services. All icons are represented by the first index of the arrays. Those are CSS classes of the Fontawesome icon set. You can find more icons under at the their [project website](//fortawesome.github.io/Font-Awesome/icons). The following indexes are the service title and a short description.
+
+fourth = ["icon", "title", "description"]
 
 ### Create your portfolio
 
