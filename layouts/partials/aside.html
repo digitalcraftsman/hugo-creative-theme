@@ -1,8 +1,9 @@
+{{ "<!-- ASIDE -->" | safeHTML }}
 <aside class="bg-dark">
     <div class="container text-center">
         <div class="call-to-action">
-            <h2>Free Download at Start Bootstrap!</h2>
-            <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>
+            <h2>{{ with .Site.Params.aside.headline }}{{ . }}{{ end }}</h2>
+            <a href="{{ with .Site.Params.aside.button.link }}{{ . }}{{ end }}" class="btn btn-default btn-xl wow tada">{{ with .Site.Params.aside.button.text }}{{ . }}{{ end }}</a>
         </div>
     </div>
 </aside>
