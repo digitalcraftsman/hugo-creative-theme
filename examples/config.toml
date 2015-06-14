@@ -38,6 +38,13 @@ theme = "hugo-creative-theme"
 
 	[params.services]
 		headline = "At your service"
+        # The array below contains all information of your services. All icons are represented by the first index
+        # (or CSS class) of the Fontawesome icon set. You can find more icons under fortawesome.github.io/Font-Awesome/icons.
+        # The following indexes are the service title and a short description.
+        first  = ["fa-diamond", "Sturdy Templates", "Our templates are updated regularly so they don't break."]
+        second = ["fa-paper-plane", "Ready to Ship", "You can use this theme as is, or you can make changes!"]
+        third  = ["fa-newspaper-o", "Up to Date", "We update dependencies to keep things fresh."]
+        fourth = ["fa-heart", "Made with Love", "You have to make your websites with love these days!"]
 
 
 	[params.portfolio.modal]
