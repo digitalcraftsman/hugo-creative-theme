@@ -1,17 +1,17 @@
 <section class="no-padding" id="portfolio">
     <div class="container-fluid">
         <div class="row no-gutter">
-            {{ range $.Site.Params.portfolio.projects }}
+            {{ range .Site.Data.projects }}
             <div class="col-lg-4 col-sm-6">
-                <a href="#portfolioModal1" class="portfolio-box portfolio-link" data-toggle="modal">
-                    <img src="{{ index . 0 }}" class="img-responsive" alt="">
+                <a href="#portfolioModal{{ .modalID }}" class="portfolio-box portfolio-link" data-toggle="modal">
+                    <img src="img/portfolio/{{ .img }}" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
-                                {{ index . 1 }}
+                                {{ .category }}
                             </div>
                             <div class="project-name">
-                                {{ index . 2 }}
+                                {{ .title }}
                             </div>
                         </div>
                     </div>
