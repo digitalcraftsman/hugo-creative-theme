@@ -9,11 +9,11 @@ Creative Theme is a one page portfolio for creatives based on the [original Boot
 
 - [Installation](#installation)
 - [Getting started](#getting-started)
-  - [The config file](#the-config-file)
-  - [Change the hero background](#change-the-hero-background)
-  - [Add your services](#add-your-services)
-  - [Create your portfolio](#create-your-portfolio)
-  - [Nearly finished](#nearly-finished)
+    - [The config file](#the-config-file)
+    - [Change the hero background](#change-the-hero-background)
+    - [Add your services](#add-your-services)
+    - [Create your portfolio](#create-your-portfolio)
+    - [Nearly finished](#nearly-finished)
 - [Contributing](#contributing)
 - [License](#license)
 - [Annotations](#annotations)
@@ -23,9 +23,9 @@ Creative Theme is a one page portfolio for creatives based on the [original Boot
 
 Inside the folder of your Hugo site run:
 
-    $ mkdir themes
-    $ cd themes
-    $ git clone https://github.com/digitalcraftsman/hugo-creative-theme
+        $ mkdir themes
+        $ cd themes
+        $ git clone https://github.com/digitalcraftsman/hugo-creative-theme
 
 For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
 
@@ -49,11 +49,13 @@ The hero acts as an eye-catcher for your site. So consider to give him a nice ba
 
 ### Add your services
 
-This section should show your capabilities and skills. You can change the services under `[params.services]` in the [`config.toml`](//github.com/digitalcraftsman/hugo-creative-theme/blob/dev/examples/config.toml).
+This section should show your capabilities and skills. You can change the services under `list ` at `[params.services]` in the [`config.toml`](//github.com/digitalcraftsman/hugo-creative-theme/blob/dev/examples/config.toml).
 
 The array below contains all information of your services. All icons are represented by the first index of the arrays. Those are CSS classes of the Fontawesome icon set. You can find more icons under at the their [project website](//fortawesome.github.io/Font-Awesome/icons). The following indexes are the service title and a short description.
 
-fourth = ["icon", "title", "description"]
+     list = [
+        ["icon", "title", "description"]
+    ]
 
 ### Create your portfolio
 
@@ -83,7 +85,7 @@ To give your projects an image, save those under [`static/img/portfolio`](//gith
 
 In order to see your site in action, run Hugo's built-in local server. 
 
-    $ hugo server -w
+        $ hugo server -w
 
 Now enter `localhost:1313` in the address bar of your browser.
 
