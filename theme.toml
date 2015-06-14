@@ -1,21 +1,18 @@
-# theme.toml template for a Hugo theme
-# See https://github.com/spf13/hugoThemes#themetoml for an example
-
 name = "Hugo Creative Theme"
-license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
-description = ""
-homepage = "http://siteforthistheme.com/"
-tags = ["", ""]
-features = ["", ""]
+license = "Apache License 2.0"
+licenselink = "//github.com/digitalcraftsman/hugo-creative-theme/blob/master/LICENSE"
+description = "A one page HTML theme for creatives."
+homepage = "//github.com/digitalcraftsman/hugo-creative-theme"
+tags = ["creative", "portfolio"]
+features = ["responsive", "portfolio", "substitutable strings"]
 min_version = 0.13
 
 [author]
-  name = ""
-  homepage = ""
+  name = "digitalcraftsman"
+  homepage = "//github.com/digitalcraftsman"
 
 # If porting an existing theme
 [original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "David Miller"
+  homepage = "//www.ironsummitmedia.com/"
+  repo = "//github.com/IronSummitMedia/startbootstrap-freelancer"
