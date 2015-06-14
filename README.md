@@ -65,7 +65,7 @@ Copy the folder [`projects`](//github.com/digitalcraftsman/hugo-creative-theme/t
 
 Pay attention to the `modalID`. It must be a unique integer and be incremented with each new project you want to add to the portfolio. Otherwise, the corresponding modal can't be rendered.
 
-Furthermore, you can use Markdown syntax for URLs like here `[text](//url.to/source)` in the description. Copy the image of an project inside `static/img/portfolio` and **just** enter the filename.
+Furthermore, you can use Markdown syntax for URLs like here `[text](//url.to/source)` in the description.
 
 To give your projects an image, save those under [`static/img/portfolio`](//github.com/digitalcraftsman/hugo-creative-theme/tree/master/static/img/portfolio). The dimensions should be 650 x 350 pixels. Don't forget to set the **filename** under 'img' in your project.
 
