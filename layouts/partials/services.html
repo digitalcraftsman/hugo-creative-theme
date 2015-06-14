@@ -10,34 +10,15 @@
     </div>
     <div class="container">
         <div class="row">
+            {{ range .Site.Params.services.list }}
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box">
-                    <i class="fa fa-4x {{ with .Site.Params.services.first }}{{ index . 0 }}{{ end }} wow bounceIn text-primary"></i>
-                    <h3>{{ with .Site.Params.services.first }}{{ index . 1 }}{{ end }}</h3>
-                    <p class="text-muted">{{ with .Site.Params.services.first }}{{ index . 2 }}{{ end }}</p>
+                    <i class="fa fa-4x {{ index . 0 }} wow bounceIn text-primary"></i>
+                    <h3>{{ index . 1 }}</h3>
+                    <p class="text-muted">{{ index . 2 }}</p>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x {{ with .Site.Params.services.second }}{{ index . 0 }}{{ end }} wow bounceIn text-primary"></i>
-                    <h3>{{ with .Site.Params.services.second }}{{ index . 1 }}{{ end }}</h3>
-                    <p class="text-muted">{{ with .Site.Params.services.second }}{{ index . 2 }}{{ end }}</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x {{ with .Site.Params.services.third }}{{ index . 0 }}{{ end }} wow bounceIn text-primary"></i>
-                    <h3>{{ with .Site.Params.services.third }}{{ index . 1 }}{{ end }}</h3>
-                    <p class="text-muted">{{ with .Site.Params.services.third }}{{ index . 2 }}{{ end }}</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x {{ with .Site.Params.services.fourth }}{{ index . 0 }}{{ end }} wow bounceIn text-primary"></i>
-                    <h3>{{ with .Site.Params.services.fourth }}{{ index . 1 }}{{ end }}</h3>
-                    <p class="text-muted">{{ with .Site.Params.services.fourth }}{{ index . 2 }}{{ end }}</p>
-                </div>
-            </div>
+            {{ end }}
         </div>
     </div>
 </section>
