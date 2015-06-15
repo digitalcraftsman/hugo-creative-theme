@@ -8,12 +8,22 @@ theme = "hugo-creative-theme"
 	# You can use Markdown syntax for urls [text](//url.to/source) for
 	# most longer texts.
 
+	# All icons using Fontawesome's icon font. Look at fortawesome.github.io/Font-Awesome/icons/
+	# for more icons. The icons are represented by their corresponding
+	# CSS class.
+
+	# All projects of the portfolio are defined in their own files. 
+	# You can find example projects at 'examples/projects'. Copy the 'projects' 
+	# folder into the 'data' directory at the root of this Hugo site.
+	# For more informtion take a look at the README.
+
 	# To provide some metadata for search engines feel free to add a few
     # information about you and your website.
 	name = "Your name"
 	description = "Your description"
 
 
+	# Navigation
 	[params.navigation]
 		brand = "Hugo Creative Theme"
 
@@ -24,38 +34,54 @@ theme = "hugo-creative-theme"
 			contact   = "Contact"
 
 
-	# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
+	# Hero section
 	[params.hero]
+		# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
 		slogan     = "Your awesome slogan"
 		subtitle   = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis nesciunt consequatur ut nihil voluptatem fugiat eos eveniet alias in veniam?"
 		buttonText = "Find out more"
 
 
+	# About section
 	[params.about]
 		headline    = "We've got what you need!"
 		description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium similique eos eligendi error veritatis harum, sed aliquid totam, quam minus neque enim est architecto, ad. Maiores, aliquid, vitae!"
 		buttonText  = "Get started!"
 
+
+	# Service section
 	[params.services]
 		headline = "At your service"
-        # The array below contains all information of your services. All icons are represented by the first index
-        # of the array. Those are CSS classes of the Fontawesome icon set. You can find more icons under fortawesome.github.io/Font-Awesome/icons.
-        # The following indexes are the service title and a short description.
-        list = [
-            ["fa-diamond", "Sturdy Templates", "Our templates are updated regularly so they don't break."],
-            ["fa-paper-plane", "Ready to Ship", "You can use this theme as is, or you can make changes!"],
-            ["fa-newspaper-o", "Up to Date", "We update dependencies to keep things fresh."],
-            ["fa-heart", "Made with Love", "You have to make your websites with love these days!"]
-        ]
+
+        [[params.services.list]]
+            icon = "fa-diamond"
+            title = "Sturdy Templates"
+            description = "Our templates are updated regularly so they don't break."
+
+        [[params.services.list]]
+			icon = "fa-paper-plane"
+			title = "Ready to Ship"
+			description = "You can use this theme as is, or you can make changes!"
+
+		[[params.services.list]]
+            icon = "fa-newspaper-o"
+            title = "Up to Date"
+            description = "We update dependencies to keep things fresh."
+
+        [[params.services.list]]
+            icon = "fa-heart"
+            title = "Made with Love"
+            description = "You have to make your websites with love these days!"
 
 
+    # Portfolio modals
 	[params.portfolio.modal]
         client = "Client"
         date = "Date"
         category = "Category"
         buttonText = "Close"
 
-
+    # Aside section
 	[params.aside]
 		headline = "Get the Creative Theme for Hugo"
 
@@ -63,7 +89,7 @@ theme = "hugo-creative-theme"
 			text = "Download now"
 			link = "//github.com/digitalcraftsman/hugo-creative-theme"
 
-
+	# Contact section
 	[params.contact]
 		headline = "Let's Get In Touch!"
 		description = "Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!"
