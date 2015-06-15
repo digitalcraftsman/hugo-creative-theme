@@ -23,9 +23,9 @@ Creative Theme is a one page portfolio for creatives based on the [original Boot
 
 Inside the folder of your Hugo site run:
 
-        $ mkdir themes
-        $ cd themes
-        $ git clone https://github.com/digitalcraftsman/hugo-creative-theme
+    $ mkdir themes
+    $ cd themes
+    $ git clone https://github.com/digitalcraftsman/hugo-creative-theme
 
 For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
 
@@ -49,14 +49,15 @@ The hero acts as an eye-catcher for your site. So consider to give him a nice ba
 
 ### Add your services
 
-This section should show your capabilities and skills. You can change the services under `list ` at `[params.services]` in the [`config.toml`](//github.com/digitalcraftsman/hugo-creative-theme/blob/dev/examples/config.toml).
+This section should show your capabilities and skills. You can change the services under  at `[params.services.list]` in the [`config.toml`](//github.com/digitalcraftsman/hugo-creative-theme/blob/dev/examples/config.toml).
 
-The array below contains all information of your services. All icons are represented by the first index of the arrays. Those are CSS classes of the Fontawesome icon set. You can find more icons under at the their [project website](//fortawesome.github.io/Font-Awesome/icons). The following indexes are the service title and a short description.
+All icons using Fontawesome's icon font. Look at the website of [Fontawesome](//fortawesome.github.io/Font-Awesome/icons/) for more icons. The icons are represented by their corresponding CSS class. A skill is defined like this example:
 
 ```toml
-list = [
-    ["icon", "title", "description"]
-]
+[[params.services.list]]
+    icon = "fa-diamond"
+    title = "Sturdy Templates"
+    description = "Our templates are updated regularly so they don't break."
 ```
 
 ### Create your portfolio
