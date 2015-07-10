@@ -37,9 +37,9 @@ After installing the Creative Theme successfully it requires a just a few more s
 
 ### The config file
 
-Take a look inside the [`examples`](//github.com/digitalcraftsman/hugo-creative-theme/tree/master/examples) folder of this theme. You'll find a file called [`config.toml`](//github.com/digitalcraftsman/hugo-creative-theme/blob/master/examples/config.toml).
+Take a look inside the [`exampleSite`](//github.com/digitalcraftsman/hugo-creative-theme/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.toml`](//github.com/digitalcraftsman/hugo-creative-theme/blob/master/exampleSite/config.toml).
 
-To use it, copy the [`config.toml`](//github.com/digitalcraftsman/hugo-creative-theme/blob/dev/examples/config.toml) in the root folder of your Hugo site. Feel free to change strings as you like to customize your website.
+To use it, copy the [`config.toml`](//github.com/digitalcraftsman/hugo-creative-theme/blob/dev/exampleSite/config.toml) in the root folder of your Hugo site. Feel free to change strings as you like to customize your website.
 
 
 ### Change the hero background
@@ -49,7 +49,7 @@ The hero acts as an eye-catcher for your site. So consider to give him a nice ba
 
 ### Add your services
 
-This section should show your capabilities and skills. You can change the services under  at `[params.services.list]` in the [`config.toml`](//github.com/digitalcraftsman/hugo-creative-theme/blob/dev/examples/config.toml).
+This section should show your capabilities and skills. You can change the services under  at `[params.services.list]` in the [`config.toml`](//github.com/digitalcraftsman/hugo-creative-theme/blob/dev/exampleSite/config.toml).
 
 All icons using Fontawesome's icon font. Look at the website of [Fontawesome](//fortawesome.github.io/Font-Awesome/icons/) for more icons. The icons are represented by their corresponding CSS class. A skill is defined like this example:
 
@@ -62,7 +62,7 @@ All icons using Fontawesome's icon font. Look at the website of [Fontawesome](//
 
 ### Create your portfolio
 
-Beside the config file, there is another subfolder called [`projects`](//github.com/digitalcraftsman/hugo-creative-theme/tree/master/examples/projects) which hosts the files that will appear as your projects in the portfolio section. Such a project file might look like [this one](//github.com/digitalcraftsman/hugo-creative-theme/blob/master/examples/projects/2014-07-05-project-1.yaml) written in YAML:
+Beside the config file, there is another subfolder called [`projects`](//github.com/digitalcraftsman/hugo-creative-theme/tree/master/exampleSite/projects) which hosts the files that will appear as your projects in the portfolio section. Such a project file might look like [this one](//github.com/digitalcraftsman/hugo-creative-theme/blob/master/exampleSite/projects/2014-07-05-project-1.yaml) written in YAML:
 
 ```yaml
 modalID: 1
@@ -75,7 +75,7 @@ category: Web Development
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel enim aliquid dicta ullam in repellendus amet perspiciatis adipisci architecto obcaecati sit voluptas ipsam, deleniti neque placeat tenetur cum tempore velit.
 ```
 
-Copy the folder [`projects`](//github.com/digitalcraftsman/hugo-creative-theme/tree/master/examples/projects) inside the `data` folder in the root directory of your site. Let's make some changes to show your work.
+Copy the folder [`projects`](//github.com/digitalcraftsman/hugo-creative-theme/tree/master/exampleSite/projects) inside the `data` folder in the root directory of your site. Let's make some changes to show your work.
 
 Pay attention to the `modalID`. It must be a unique integer and be incremented with each new project you want to add to the portfolio. Otherwise, the corresponding modal can't be rendered.
 
