@@ -12,8 +12,8 @@ theme = "hugo-creative-theme"
 	# for more icons. The icons are represented by their corresponding
 	# CSS class.
 
-	# All projects of the portfolio are defined in their own files. 
-	# You can find example projects at 'examples/projects'. Copy the 'projects' 
+	# All projects of the portfolio are defined in their own files.
+	# You can find example projects at 'exampleSite/data/projects'. Copy the 'projects'
 	# folder into the 'data' directory at the root of this Hugo site.
 	# For more informtion take a look at the README.
 
