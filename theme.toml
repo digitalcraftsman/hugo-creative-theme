@@ -1,11 +1,11 @@
-name = "Hugo Creative Theme"
+name = "Creative"
 license = "Apache License 2.0"
 licenselink = "//github.com/digitalcraftsman/hugo-creative-theme/blob/master/LICENSE"
 description = "A one page HTML theme for creatives."
 homepage = "//github.com/digitalcraftsman/hugo-creative-theme"
 tags = ["creative", "portfolio"]
 features = ["responsive", "portfolio", "substitutable strings"]
-min_version = 0.13
+min_version = 0.14
 
 [author]
   name = "digitalcraftsman"
