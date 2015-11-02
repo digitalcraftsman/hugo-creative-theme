@@ -5,6 +5,8 @@
 <meta name="description" content="{{ with .Site.Params.description }}{{ . }}{{ end }}">
 {{ .Hugo.Generator }}
 <title>{{ .Site.Title }}</title>
+{{ "<!-- Favicon -->" | safeHTML }}
+<link rel="shortcut icon" href="{{ .Site.BaseURL }}{{ .Site.Params.favicon }}">
 {{ "<!-- Bootstrap Core CSS -->" | safeHTML }}
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/bootstrap.min.css" type="text/css">
 {{ "<!-- Custom Fonts -->" | safeHTML }}
