@@ -5,25 +5,10 @@ Creative Theme is a one page portfolio for creatives based on the [original Boot
 ![Hugo Creative Theme Screenshot](https://raw.githubusercontent.com/digitalcraftsman/hugo-creative-theme/dev/images/screenshot.png)
 
 
-## Contents
-
-- [Installation](#installation)
-- [Getting started](#getting-started)
-    - [The config file](#the-config-file)
-    - [Change the hero background](#change-the-hero-background)
-    - [Add your services](#add-your-services)
-    - [Create your portfolio](#create-your-portfolio)
-    - [Nearly finished](#nearly-finished)
-- [Contributing](#contributing)
-- [License](#license)
-- [Annotations](#annotations)
-
-
 ## Installation
 
 Inside the folder of your Hugo site run:
 
-    $ mkdir themes
     $ cd themes
     $ git clone https://github.com/digitalcraftsman/hugo-creative-theme
 
@@ -88,21 +73,26 @@ To give your projects an image, save those under [`static/img/portfolio`](//gith
 
 In order to see your site in action, run Hugo's built-in local server. 
 
-    $ hugo server -w
+    $ hugo server
 
-Now enter `localhost:1313` in the address bar of your browser.
+Now enter [`localhost:1313`](https://localhost:1313) in the address bar of your browser.
 
 
 ## Contributing
 
 Did you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](//github.com/digitalcraftsman/hugo-creative-theme/issues) to let me know. Or make directly a [pull request](//github.com/digitalcraftsman/hugo-creative-theme/pulls).
 
+Please create a separate branch for your pull request.
+
 
 ## License
 
-This theme is released under the Apache License 2.0 For more information read the [License](//github.com/digitalcraftsman/hugo-creative-theme/blob/master/LICENSE).
+This theme is released under the Apache License 2.0 For more information read the [license](//github.com/digitalcraftsman/hugo-creative-theme/blob/master/LICENSE).
 
 
-## Annotations
+## Acknowledgements
 
-Thanks to [Steve Francia](//github.com/spf13) for creating Hugo and the awesome community around the project.
+Thanks to 
+
+- [Steve Francia](//github.com/spf13) for creating Hugo and the awesome community around the project
+- [David Miller](//github.com/davidtmiller) for creating the original theme
