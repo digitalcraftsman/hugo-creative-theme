@@ -19,21 +19,28 @@
                             <hr class="star-primary">
                         {{ end }}
                         <img src="img/portfolio/{{ .img }}" class="img-responsive img-centered" alt="">
-                        <p>{{ .description | markdownify }}</p>
-                        <ul class="list-inline item-details">
-                                <strong><a href="{{ .clientLink }}">{{ .client }}</a>
-                                    </strong>
-                            </li>
-                                <strong><a href="#">{{ .date }}</a>
-                                    </strong>
-                            </li>
-                                <strong><a href="#">{{ .category }}</a>
-                                    </strong>
-                            </li>
-                        </ul>
+                        {{ with .description }}
+                            <p>{{ . | markdownify }}</p>
+                        {{ end }}
+                        {{ if or .client .date .category }}
+                            <ul class="list-inline item-details">
+                                {{ if .client }}
                                     <li>{{ with $.Site.Params.portfolio.modal.client }}{{.}}: {{ end }}
+                                        <strong><a href="{{ with .clientLink }}{{ . }}{{ else }}#{{ end }}">{{ .client }}</a></strong>
+                                    </li>
+                                {{ end }}
+                                {{ if .date }}
                                     <li>{{ with $.Site.Params.portfolio.modal.date }}{{.}}: {{ end }}
+                                        <strong><a href="#">{{ .date }}</a></strong>
+                                    </li>
+                                {{ end }}
+                                {{ if .category }}
                                     <li>{{ with $.Site.Params.portfolio.modal.category }}{{.}}: {{ end }}
+                                        <strong><a href="#">{{ .category }}</a></strong>
+                                    </li>
+                                {{ end }}
+                            </ul>
+                        {{ end }}
                         {{ with $.Site.Params.portfolio.modal.buttonText }}
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>{{.}}</button>
                         {{ end }}
