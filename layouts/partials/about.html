@@ -4,9 +4,11 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <h2 class="section-heading">{{ with .Site.Params.about.headline }}{{ . }}{{ end }}</h2>
-                <hr class="light">
                 <p class="text-faded">{{ with .Site.Params.about.description }}{{ . | markdownify }}{{ end }}</p>
                 <a href="#" class="btn btn-default btn-xl">{{ with .Site.Params.about.buttonText }}{{ . }}{{ end }}</a>
+                {{ if and .Site.Params.about.headline .Site.Params.about.description }}
+                    <hr class="light">
+                {{ end }}
             </div>
         </div>
     </div>
