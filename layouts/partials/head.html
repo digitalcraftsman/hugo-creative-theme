@@ -1,8 +1,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="{{ with .Site.Params.name }}{{ . }}{{ end }}">
-<meta name="description" content="{{ with .Site.Params.description }}{{ . }}{{ end }}">
+{{ with .Site.Params.name }}<meta name="author" content="{{ . }}">{{ end }}
+{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 {{ .Hugo.Generator }}
 <title>{{ .Site.Title }}</title>
 {{ "<!-- Favicon -->" | safeHTML }}

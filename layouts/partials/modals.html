@@ -12,27 +12,31 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="modal-body">
-                        <h2>{{ .title }}</h2>
+                        {{ with .title }}
+                            <h2>{{ . }}</h2>
+                        {{ end }}
                         {{ if and .title .description }}
                             <hr class="star-primary">
                         {{ end }}
                         <img src="img/portfolio/{{ .img }}" class="img-responsive img-centered" alt="">
                         <p>{{ .description | markdownify }}</p>
                         <ul class="list-inline item-details">
-                            <li>{{ with $.Site.Params.portfolio.modal.client }}{{.}}{{ end }}:
                                 <strong><a href="{{ .clientLink }}">{{ .client }}</a>
                                     </strong>
                             </li>
-                            <li>{{ with $.Site.Params.portfolio.modal.date }}{{.}}{{ end }}:
                                 <strong><a href="#">{{ .date }}</a>
                                     </strong>
                             </li>
-                            <li>{{ with $.Site.Params.portfolio.modal.category }}{{.}}{{ end }}:
                                 <strong><a href="#">{{ .category }}</a>
                                     </strong>
                             </li>
                         </ul>
-                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> {{ with $.Site.Params.portfolio.modal.buttonText }}{{.}}{{ end }}</button>
+                                    <li>{{ with $.Site.Params.portfolio.modal.client }}{{.}}: {{ end }}
+                                    <li>{{ with $.Site.Params.portfolio.modal.date }}{{.}}: {{ end }}
+                                    <li>{{ with $.Site.Params.portfolio.modal.category }}{{.}}: {{ end }}
+                        {{ with $.Site.Params.portfolio.modal.buttonText }}
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>{{.}}</button>
+                        {{ end }}
                     </div>
                 </div>
             </div>
