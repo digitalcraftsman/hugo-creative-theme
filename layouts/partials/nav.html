@@ -14,18 +14,26 @@
         {{ "<!-- Collect the nav links, forms, and other content for toggling -->" | safeHTML }}
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll" href="#about">{{ with .Site.Params.navigation.links.about }}{{ . }}{{ end }}</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#services">{{ with .Site.Params.navigation.links.services }}{{ . }}{{ end }}</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#portfolio">{{ with .Site.Params.navigation.links.portfolio }}{{ . }}{{ end }}</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#contact">{{ with .Site.Params.navigation.links.contact }}{{ . }}{{ end }}</a>
-                </li>
+                {{ if and .Site.Params.about .Site.Params.navigation.links.about }}
+                    <li>
+                        <a class="page-scroll" href="#about">{{ .Site.Params.navigation.links.about }}</a>
+                    </li>
+                {{ end }}
+                {{ if and .Site.Params.services.list .Site.Params.navigation.links.services }}
+                    <li>
+                        <a class="page-scroll" href="#services">{{ .Site.Params.navigation.links.services }}</a>
+                    </li>
+                {{ end }}
+                {{ if and .Site.Data.projects .Site.Params.navigation.links.portfolio }}
+                    <li>
+                        <a class="page-scroll" href="#portfolio">{{ .Site.Params.navigation.links.portfolio }}</a>
+                    </li>
+                {{ end }}
+                {{ if and .Site.Params.contact .Site.Params.navigation.links.contact }}
+                    <li>
+                        <a class="page-scroll" href="#contact">{{ .Site.Params.navigation.links.contact }}</a>
+                    </li>
+                {{ end }}
             </ul>
         </div>
         {{ "<!-- /.navbar-collapse -->" | safeHTML }}
