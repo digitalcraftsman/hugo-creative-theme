@@ -483,3 +483,9 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #222;
 }
+
+#map {
+    height: 300px;
+    overflow: visible;
+    position: relative;
+}
