@@ -6,5 +6,10 @@
 <script src="{{ .Site.BaseURL }}js/jquery.easing.min.js"></script>
 <script src="{{ .Site.BaseURL }}js/jquery.fittext.js"></script>
 <script src="{{ .Site.BaseURL }}js/wow.min.js"></script>
+{{ if .Site.Params.location }}
+<script src='https://maps.googleapis.com/maps/api/js?key={{ .Site.Params.location.maps_api_key }}&v=3.exp'></script>
+<script src="{{ .Site.BaseURL }}js/hpneo.gmaps.js"></script>
+<script src="{{ .Site.BaseURL }}js/gmaps.init.js"></script>
+{{ end }}
 {{ "<!-- Custom Theme JavaScript -->" | safeHTML }}
 <script src="{{ .Site.BaseURL }}js/creative.js"></script>

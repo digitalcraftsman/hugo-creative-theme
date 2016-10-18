@@ -24,6 +24,10 @@
             {{ partial "portfolio.html" . }}
         {{ end }}
 
+        {{ if .Site.Params.location }}
+            {{ partial "location.html" . }}
+        {{ end }}
+
         {{ if .Site.Params.aside }}
             {{ partial "aside.html" . }}
         {{ end }}
