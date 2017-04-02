@@ -18,7 +18,7 @@
                     <i class="fa fa-4x {{ .icon }} wow bounceIn text-primary"></i>
                     <h3>{{ .title }}</h3>
                     {{ with .description }}
-                        <p class="text-muted">{{ . }}</p>
+                        <p class="text-muted">{{ . | markdownify }}</p>
                     {{ end }}
                 </div>
             </div>
