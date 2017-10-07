@@ -1,0 +1,24 @@
+{{ define "header" }}
+{{ partial "page-hero.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<p>{{ humanize .Section | upper  }}</p>
+				<h2 class="section-heading">
+					{{ .Title }}
+				</h2>
+				<time class="f6 mv4 dib tracked" datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00 " }}">
+				{{ .Date.Format "January 2, 2006" }}
+				</time>
+				<hr>
+				{{ .Content }}
+				<hr>
+			</div>
+		</div>
+	</div>
+</section>
+{{ end }}
