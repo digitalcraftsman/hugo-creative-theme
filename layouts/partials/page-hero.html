@@ -8,11 +8,9 @@
 			{{ with .Params.Title }}
 			<p class="header--page__content__title">{{ . | markdownify  }}</p>
 			{{ end }}
-			{{ if and .Site.Params.hero.slogan .Site.Params.hero.subtitle }}
+			{{ with .Params.Tagline }}
 			<hr class="header--page__content__divider">
-			{{ end }}
-			{{ with .Params.Desc }}
-			<p class="header--page__content__description">{{ . | markdownify }}</pheader--page__content__description>
+			<p class="header--page__content__description">{{ . | markdownify }}</p>
 			{{ end }}
 		</div>
 	</div>
@@ -24,12 +22,10 @@
 			{{ with .Params.Title }}
 			<p class="header--page__content__title">{{ . | markdownify  }}</p>
 			{{ end }}
-			{{ if and .Site.Params.hero.slogan .Site.Params.hero.subtitle }}
+			{{ with .Params.Tagline }}
 			<hr class="header--page__content__divider">
+			<p class="header--page__content__description">{{ . | markdownify }}</p>
 			{{ end }}
-			{{ with .Params.Desc }}
-			<p class="header--page__content__description">{{ . | markdownify }}</pheader--page__content__description>
-				{{ end }}
 		</div>
 	</div>
 </header>

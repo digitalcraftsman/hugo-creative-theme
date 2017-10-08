@@ -499,7 +499,7 @@ body {
 /*-- Page Header --*/
 
 .header--page {
-    background: #333;
+    background: #191919;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -526,6 +526,8 @@ body {
 
 /*-- Posts --*/
 
+.posts {}
+
 .post__meta {
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
     font-weight: bold;
@@ -533,9 +535,11 @@ body {
 }
 
 .post__meta__type,
-.post__meta__date {
+.post__meta__date { margin-bottom: 4rem; }
+
+.post__meta__type {
     letter-spacing: 0.25rem;
-    margin-bottom: 4rem;
+    text-transform: uppercase;
 }
 
 .post__meta__date {
@@ -563,4 +567,87 @@ body {
 .post__content img {
     height: auto;
     max-width: 100%;
+}
+
+.post__read-more-link {
+    color: #333;
+    font-weight: bold;
+}
+
+.post__read-more-link:focus,
+.post__read-more-link:hover { color: #f05f40; }
+
+.post__read-more-link--overlay {
+    height: 100%;
+    width: 100%;
+    text-indent: -9999px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.post--summary {
+    border-bottom: 1px solid #e5e5e5;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.post--summary:first-of-type { padding-top: 0; }
+
+.post--summary:last-of-type { margin-bottom: 4rem; }
+
+.post--summary:focus .post__meta__title,
+.post--summary:hover .post__meta__title,
+.post--summary:focus .post__read-more-link,
+.post--summary:hover .post__read-more-link { color: #f05f40; }
+
+.post--summary .post__content,
+.post--summary .post__content p { margin-bottom: 0; }
+
+.post--summary .post__content { margin-top: 1rem; }
+
+.post--summary .post__meta__date,
+.post--summary .post__meta__title { margin-bottom: 3rem; }
+
+
+/*-- Pagination --*/
+
+.pagination {}
+
+.pagination li {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.pagination .disabled { display: none; }
+
+.pagination li a,
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+    border: 1px solid #e5e5e5;
+    border-radius: 0.5rem;
+    color: #333;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+    background-color: #fff;
+    border-color: #f05f40;
+    color: #f05f40;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+    background-color: #f05f40;
+    border-color: #f05f40;
+    color: #fff;
 }
