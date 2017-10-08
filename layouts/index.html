@@ -11,6 +11,10 @@
     {{ partial "portfolio.html" . }}
     {{ end }}
 
+    {{ if .Site.Params.blog }}
+    {{ partial "blog.html" . }}
+    {{ end }}
+
     {{ if .Site.Params.location }}
     {{ partial "location.html" . }}
     {{ end }}

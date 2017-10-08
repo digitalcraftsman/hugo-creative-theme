@@ -499,18 +499,21 @@ body {
 /*-- Page Header --*/
 
 .header--page {
-    background: #191919;
+    background: #f05f40;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: auto;
 }
 
+.header--page--post { background: #191919; }
+
 .header--page__content {
     padding: 14rem 2rem 10rem;
 }
 
 .header--page__content__title {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
     font-size: 5rem;
     font-weight: bold;
     margin-bottom: 4rem;
@@ -520,7 +523,7 @@ body {
 
 .header--page__content__description {
     font-weight: 300;
-    opacity: 0.85;
+    opacity: 0.7;
 }
 
 
