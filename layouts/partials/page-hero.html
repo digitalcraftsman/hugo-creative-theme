@@ -1,19 +1,36 @@
-{{ "<!-- HEADER -->" | safeHTML }}
-<header class="header--page" style="background: black;">
-	<div class="header-content">
+{{ $featured_image := .Params.featured_image }}
+{{ if $featured_image }}
+{{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
+{{ $featured_image := (trim $featured_image "/") | absURL }}
+<header class="header--page" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{{ $featured_image }}');">
+	<div class="header--page__content">
 		<div class="header-content-inner">
-			{{ with .Site.Params.hero.slogan }}
-			<h1>{{ . | markdownify  }}</h1>
+			{{ with .Params.Title }}
+			<p class="header--page__content__title">{{ . | markdownify  }}</p>
 			{{ end }}
 			{{ if and .Site.Params.hero.slogan .Site.Params.hero.subtitle }}
-			<hr>
+			<hr class="header--page__content__divider">
 			{{ end }}
-			{{ with .Site.Params.hero.subtitle }}
-			<p>{{ . | markdownify }}</p>
-			{{ end }}
-			{{ with .Site.Params.hero.buttonText }}
-			<a href="#about" class="btn btn-primary btn-xl page-scroll">{{ . }}</a>
+			{{ with .Params.Desc }}
+			<p class="header--page__content__description">{{ . | markdownify }}</pheader--page__content__description>
 			{{ end }}
 		</div>
 	</div>
 </header>
+{{ else }}
+<header class="header--page">
+	<div class="header--page__content">
+		<div class="header-content-inner">
+			{{ with .Params.Title }}
+			<p class="header--page__content__title">{{ . | markdownify  }}</p>
+			{{ end }}
+			{{ if and .Site.Params.hero.slogan .Site.Params.hero.subtitle }}
+			<hr class="header--page__content__divider">
+			{{ end }}
+			{{ with .Params.Desc }}
+			<p class="header--page__content__description">{{ . | markdownify }}</pheader--page__content__description>
+				{{ end }}
+		</div>
+	</div>
+</header>
+{{ end }}

@@ -489,3 +489,78 @@ body {
     overflow: visible;
     position: relative;
 }
+
+/*
+ * Page & Post Styling
+ */
+
+/*-- Typography --*/
+
+/*-- Page Header --*/
+
+.header--page {
+    background: #333;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: auto;
+}
+
+.header--page__content {
+    padding: 14rem 2rem 10rem;
+}
+
+.header--page__content__title {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+.header--page__content__divider { margin: 4rem auto; }
+
+.header--page__content__description {
+    font-weight: 300;
+    opacity: 0.85;
+}
+
+
+/*-- Posts --*/
+
+.post__meta {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.post__meta__type,
+.post__meta__date {
+    letter-spacing: 0.25rem;
+    margin-bottom: 4rem;
+}
+
+.post__meta__date {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: normal;
+}
+
+.post__meta__title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+}
+
+.post__content {
+    color: #777;
+    margin: 60px auto;
+}
+
+.post__content p {
+    font-weight: 300;
+    line-height: 1.9;
+    margin-bottom: 3rem;
+}
+
+.post__content img {
+    height: auto;
+    max-width: 100%;
+}
