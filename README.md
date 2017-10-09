@@ -55,7 +55,7 @@ title: Project 1
 date: 2014-07-05
 img: 1.jpg
 client: Start Bootstrap
-clientLink: "#"
+link: "#"
 category: Web Development
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel enim aliquid dicta ullam in repellendus amet perspiciatis adipisci architecto obcaecati sit voluptas ipsam, deleniti neque placeat tenetur cum tempore velit.
 ```
@@ -68,6 +68,33 @@ Furthermore, you can use Markdown syntax for URLs like here `[text](//url.to/sou
 
 To give your projects an image, save those under [`static/img/portfolio`](//github.com/digitalcraftsman/hugo-creative-theme/tree/master/static/img/portfolio). The dimensions should be 650 x 350 pixels. Don't forget to set the **filename** under 'img' in your project.
 
+### Blog
+
+This theme has been extended to feature a blog. Within the config file, the blog can be enabled/disabled by uncommenting/commenting the `params.blog` option and it's options.
+
+Specific features can be enabled and disabled via the config:
+
+- `showHomeSection` - Shows the blog section on the homepage. (Default: `true`.)
+- `showHomePosts` - Shows the first 4 latest posts within the blog section. (Default: `true`.)
+- `showHomePostExcerpts` - Show post excerpts on the homepage. (Default: `true`.)
+
+Newly created posts look like this:
+
+```markdown
+date: 2017-04-09T10:58:08-04:00
+description: "The Outsider"
+featured_image: "/images/ex-feat-image.jpg"
+tags: ["music"]
+title: "DJ Shadow's Newest EP, The Outsider"
+tagline: "A review of the artist's new EP."
+author: "Your Name"
+---
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel enim aliquid dicta ullam in repellendus amet perspiciatis adipisci architecto obcaecati sit voluptas ipsam, deleniti neque placeat tenetur cum tempore velit...
+```
+
+On the blog article pages, the header will be filled in with the featured_image link. If it's empty, it defaults to a solid color.
+
+Although the blog can be "disabled" on the front-end, it can't be completely disabled. It will be hidden, but it's still reachable via direct links. This is a limitation of Hugo itself, unfortunately. Until the ability to enable/disable sections is built in, this will continue to be a limitation.
 
 ### Nearly finished
 

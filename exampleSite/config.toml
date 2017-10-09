@@ -109,6 +109,9 @@ Paginate = 10 # Post pagination for the main blog page.
 	# 	maps_api_key = ""
 
 	# Blogging Feature
-	# Comment out or in to disable / enable.
-	[params.blog]
-	    slugs = "on" # Show article link slugs.
+	# Comment out to disable the blog completely (links still work unfortunately).
+	# Set sections to false to disable them.
+	 [params.blog]
+	    showHomeSection = true
+	    showHomePosts = true
+	    showHomePostExcerpts = true
