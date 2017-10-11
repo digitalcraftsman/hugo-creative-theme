@@ -1,0 +1,44 @@
+{{ if eq .Site.Params.blog.showHomeSection true }}
+{{ "<!-- BLOG -->" | safeHTML }}
+<section class="posts--list" id="blog">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				{{ if eq .Site.Params.blog.showHomePosts true }}
+					<h2 class="section-heading text-center">Latest Blog Posts</h2>
+
+					<hr>
+
+					{{/* Create a variable with that section to use in multiple places. */}}
+					{{ $posts := where .Site.RegularPages "Section" "in" "blog" }}
+
+					{{/* Check to see if the section is defined for ranging through it */}}
+					{{ $post_count := len $posts }}
+
+					{{ if ge $post_count 1 }}
+						<div class="posts--list__inner">
+							{{ range (first 4 $posts) }}
+							<div class="posts--list__card">
+								<a class="post__read-more-link--overlay" href="{{ .URL }}" title="{{ .Title }}">{{ .Title }}</a>
+								<div class="posts--list__card__title"><a href="{{ .URL }}" title="{{ .Title }}">{{ .Title }}</a></div>
+								<div class="posts--list__card__date">{{ .Date.Format "January 2, 2006" }}</div>
+								{{ if eq .Site.Params.blog.showHomePostExcerpts true }}
+								<div class="posts--list--card__summary">{{ .Summary | truncate 140 }}</div>
+								{{ end }}
+								<a href="{{ .URL }}" title="{{ .Title }}" class="post__read-more-link">Read More &rarr;</a>
+							</div>
+							{{ end }}
+						</div>
+					{{ else }}
+							<p>Sorry bud, no posts here.</p>
+					{{ end }}
+				{{ end }}
+
+				<div class="posts--list__blog-link">
+					<a href="/blog" class="btn btn-primary btn-xl">Visit the Blog</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{{ end }}

@@ -1,0 +1,23 @@
+{{ "<!-- FOOTER -->" | safeHTML }}
+<footer class="footer bg-dark">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 footer__copyright">
+					<p>Copyright &copy {{ .Now.Year }} {{ .Site.Params.Name }}</p>
+				</div>
+				<div class="cl-xs-12 col-sm-6 footer__links">
+					<ul class="list-inline">
+						{{ if and .Site.Params.footer.nav .Site.Params.footer.nav.terms }}
+						<li><a href="{{ .Site.Params.footer.nav.terms.link }}">{{ .Site.Params.footer.nav.terms.text }}</a></li>
+						{{ end }}
+						{{ if and .Site.Params.footer.nav .Site.Params.footer.nav.privacy }}
+						<li><a href="{{ .Site.Params.footer.nav.privacy.link }}">{{ .Site.Params.footer.nav.privacy.text }}</a></li>
+						{{ end }}
+						{{ if and .Site.Params.footer.nav .Site.Params.footer.nav.contact }}
+						<li><a href="{{ .Site.Params.footer.nav.contact.link }}">{{ .Site.Params.footer.nav.contact.text }}</a></li>
+						{{ end }}
+					</ul>
+				</div>
+			</div>
+		</div>
+</footer>

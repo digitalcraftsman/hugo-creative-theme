@@ -50,25 +50,71 @@ All icons using Fontawesome's icon font. Look at the website of [Fontawesome](//
 Beside the config file, there is in `data` another subfolder called [`projects`](//github.com/digitalcraftsman/hugo-creative-theme/tree/master/exampleSite/data/projects) which hosts the files that will appear as your projects in the portfolio section. Such a project file might look like [this one](//github.com/digitalcraftsman/hugo-creative-theme/blob/dev/exampleSite/data/projects/2014-07-05-project-1.yaml) written in YAML:
 
 ```yaml
-modalID: 1
-title: Project 1
-date: 2014-07-05
-img: 1.jpg
-client: Start Bootstrap
-clientLink: "#"
+title: Project Title
+date: 2017-10-13
+img: projectImage.jpg
+link: "https://linkto.project"
 category: Web Development
-description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel enim aliquid dicta ullam in repellendus amet perspiciatis adipisci architecto obcaecati sit voluptas ipsam, deleniti neque placeat tenetur cum tempore velit.
+description: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 ```
 
 Copy the folder [`projects`](//github.com/digitalcraftsman/hugo-creative-theme/tree/master/exampleSite/data/projects) inside the `data` folder in the **root** directory of your site. Let's make some changes to show your work.
-
-Pay attention to the `modalID`. It must be a unique integer and be incremented with each new project you want to add to the portfolio. Otherwise, the corresponding modal can't be rendered.
 
 Furthermore, you can use Markdown syntax for URLs like here `[text](//url.to/source)` in the description.
 
 To give your projects an image, save those under [`static/img/portfolio`](//github.com/digitalcraftsman/hugo-creative-theme/tree/master/static/img/portfolio). The dimensions should be 650 x 350 pixels. Don't forget to set the **filename** under 'img' in your project.
 
+### Blog
 
+This theme has been extended to feature a blog. Within the config file, the blog can be enabled/disabled by uncommenting/commenting the `params.blog` option and it's options.
+
+Specific features can be enabled and disabled via the config:
+
+- `showHomeSection` - Shows the blog section on the homepage. (Default: `true`.)
+- `showHomePosts` - Shows the first 4 latest posts within the blog section. (Default: `true`.)
+- `showHomePostExcerpts` - Show post excerpts on the homepage. (Default: `true`.)
+
+Newly created posts look like this:
+
+```markdown
+date: 2017-10-11T03:14:31-04:00
+title: "Hello World, This is My First Post!"
+description: "This is my very first post on the blog."
+author: "Your Name"
+featured_image: "/images/post-featured-image.jpg"
+draft: true
+---
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel enim aliquid dicta ullam in repellendus amet perspiciatis adipisci architecto obcaecati sit voluptas ipsam, deleniti neque placeat tenetur cum tempore velit...
+```
+
+On the blog article pages, the header will be filled in with the `featured_image` link. If it's empty, it defaults to a solid color.
+
+To let blog posts be published just set the `draft` meta tag to false.
+
+Although the blog can be "disabled" on the front-end, it can't be completely disabled. It will be hidden, but it's still reachable via direct links. This is a limitation of Hugo itself, unfortunately. Until the ability to enable/disable sections is built in, this will continue to be a limitation.
+
+### Blog Pagination
+
+The main blog page has a pagination function to only show a certain number of posts today. This can be found within the `config.toml` file in the `Pagination` property. For the purposes of the example site it's set to 3. However, this value can be modified to show any number of posts per page.
+### Footer Copyright and Links
+
+The footer copyright mark uses the automatic current year and `name` parameter set in `config.toml` to generate the statement. This functionality can be changed in the `footer.html` partial template.
+
+Footer links are generated the same way the primary navigation links are. To extend it, just modify the parameters under the `params.footer.nav` parameter in `config.toml`. The typical structure for it is as such (where `name` is the name of the link):
+
+```markdown
+[params.footer.nav.name]
+text = "Display Text"
+link = "https://link.address"
+```
+
+Once it's been added to the config, it must also be added to the `footer.html` partial within the list contained within the `footer__links` div, using the following structure:
+
+```markdown
+{{ if and .Site.Params.footer.nav .Site.Params.footer.nav.name }}
+<li><a href="{{ .Site.Params.footer.nav.name.link }}">{{ .Site.Params.footer.nav.name.text }}</a></li>
+{{ end }}
+```
 ### Nearly finished
 
 In order to see your site in action, run Hugo's built-in local server. 
