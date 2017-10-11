@@ -609,14 +609,14 @@ body {
 }
 
 .post__meta__type,
-.post__meta__date { margin-bottom: 4rem; }
+.post__meta__byline { margin-bottom: 4rem; }
 
 .post__meta__type {
     letter-spacing: 0.25rem;
     text-transform: uppercase;
 }
 
-.post__meta__date {
+.post__meta__byline {
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
     font-weight: normal;
 }
@@ -689,7 +689,7 @@ body {
 
 .post--summary .post__content { margin-top: 1rem; }
 
-.post--summary .post__meta__date,
+.post--summary .post__meta__byline,
 .post--summary .post__meta__title { margin-bottom: 3rem; }
 
 

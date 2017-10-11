@@ -1,1 +1,1 @@
-+++ title = "" date = "" tags = [] featured_image = "" description = "" +++
++++ date = "" title = "" description = "" featured_image = "" +++

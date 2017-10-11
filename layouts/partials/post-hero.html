@@ -22,7 +22,7 @@
 			{{ with .Params.Title }}
 			<p class="header--page__content__title">{{ . | markdownify  }}</p>
 			{{ end }}
-			{{ with .Params.Tagline }}
+			{{ with .Description }}
 			<hr class="header--page__content__divider light">
 			<p class="header--page__content__description">{{ . | markdownify }}</p>
 			{{ end }}

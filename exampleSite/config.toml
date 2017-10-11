@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Hugo Creative Theme"
 theme = "hugo-creative-theme"
 googleAnalytics = ""
-Paginate = 10 # Post pagination for the main blog page.
+Paginate = 3 # Post pagination for the main blog page.
 
 [params]
 
@@ -115,3 +115,17 @@ Paginate = 10 # Post pagination for the main blog page.
 	    showHomeSection = true
 	    showHomePosts = true
 	    showHomePostExcerpts = true
+
+	# Footer Navigation
+	[params.footer.nav]
+        [params.footer.nav.terms]
+        text = "Terms & Conditions"
+        link = "http://google.com"
+
+        [params.footer.nav.privacy]
+        text = "Privacy Policy"
+        link = "http://apple.com"
+
+        [params.footer.nav.contact]
+        text = "Privacy Policy"
+        link = "/#contact"
