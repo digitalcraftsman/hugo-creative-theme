@@ -12,9 +12,10 @@
                 {{ with .Site.Params.about.description }}
                     <p class="text-faded">{{ . | markdownify }}</p>
                 {{ end }}
-                {{ with .Site.Params.about.buttonText }}
-                    <a href="#" class="btn btn-default btn-xl">{{ . }}</a>
-                {{ end }}
+
+                <a href="{{ .Site.Params.about.link }}" class="btn btn-default btn-xl">
+                  {{ .Site.Params.about.buttonText }}
+                </a>
             </div>
         </div>
     </div>
