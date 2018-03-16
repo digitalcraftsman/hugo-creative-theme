@@ -22,7 +22,7 @@
                 {{ end }}
                 col-lg-offset-2 text-center">
                     <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                    <p>{{ .Site.Params.contact.phone }}</p>
+                    <p><a href="tel:{{ .Site.Params.contact.phone_clean }}">{{ .Site.Params.contact.phone }}</a></p>
                 </div>
             {{ end }}
             {{ if .Site.Params.contact.email }}
