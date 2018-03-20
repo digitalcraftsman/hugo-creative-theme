@@ -363,6 +363,10 @@ header .header-content .header-content-inner p {
     color: #988abc;
 }
 
+.text-secondary {
+    color: #512878;
+}
+
 .no-gutter > [class*=col-] {
     padding-right: 0;
     padding-left: 0;
@@ -516,4 +520,41 @@ body {
     height: 300px;
     overflow: visible;
     position: relative;
+}
+
+#contact {
+    position: relative;
+}
+
+#contact:before {
+    background-image: url(../img/header.jpg);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    bottom: 0;
+    content: '';
+    -webkit-filter: blur(3px) grayscale(1);
+    -moz-filter: blur(3px) grayscale(1);
+    -o-filter: blur(3px) grayscale(1);
+    -ms-filter: blur(3px) grayscale(1);
+    filter: blur(3px) grayscale(1);
+    left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.contact-container > p {
+    margin-bottom: 0;
+}
+
+.contact-container:first-of-type {
+    margin-bottom: 20px;
+}
+
+.contact-placeholder {
+    padding: 40px;
+    background-color: white;
 }
