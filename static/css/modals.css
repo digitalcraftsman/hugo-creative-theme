@@ -79,3 +79,23 @@ body {
     display: none;
     opacity: 0;
 }
+
+.modal-body strong > em {
+    font-size: 85%;
+}
+
+.modal-body strong > em:after {
+    content: "2";
+    font-size: 75%;
+    position: relative;
+    top: -0.5em;
+}
+
+.carousel-inner {
+    height: 0;
+    padding-bottom: calc(350/650 * 100%);
+}
+
+.carousel-inner img {
+    width: 100%;
+}

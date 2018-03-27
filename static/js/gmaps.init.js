@@ -8,6 +8,7 @@ function map () {
   if ($('#map').length) {
     var lat = $('#gmap-lat').val()
     var lng = $('#gmap-lng').val()
+    var zoom = parseInt($('#gmap-zoom').val(), 10)
     var image = '/img/marker.png'
 
     var styles =
@@ -48,7 +49,8 @@ function map () {
       overviewMapControl: false,
       scrollwheel: false,
       draggable: false,
-      styles: styles
+      styles: styles,
+      zoom: zoom
     })
 
     map.addMarker({

@@ -4,8 +4,9 @@
     <div class="hidden">
         <input id="gmap-lat" value="{{ .Site.Params.location.latitude }}" />
         <input id="gmap-lng" value="{{ .Site.Params.location.longitude }}" />
+        <input id="gmap-zoom" value="{{ .Site.Params.location.zoom}}" />
     </div>
-    <a href="https://www.google.com/maps?z=16&q={{ .Site.Params.location.latitude }},{{ .Site.Params.location.longitude }}&ll={{ .Site.Params.location.latitude }},{{ .Site.Params.location.longitude }}">
+    <a href="https://www.google.com/maps?z=17&q={{ .Site.Params.location.latitude }},{{ .Site.Params.location.longitude }}&ll={{ .Site.Params.location.latitude }},{{ .Site.Params.location.longitude }}">
         <div id="map">
             &nbsp;
         </div>
