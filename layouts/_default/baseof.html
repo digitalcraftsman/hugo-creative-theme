@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }} {{ . }} {{ else }} en-US {{ end }}">
+	<head>
+		{{ partial "head.html" . }}
+	</head>
+	<body id="page-top">
+		{{ block "nav" . }}
+		{{ if or .Site.Params.navigation.links.about .Site.Params.navigation.links.services .Site.Params.navigation.links.portfolio .Site.Params.navigation.links.contact }}
+		{{ partial "nav.html" . }}
+		{{ end }}
+		{{ end }}
+
+		{{ block "header" . }}
+			{{ if .Site.Params.hero }}
+			{{ partial "hero.html" . }}
+			{{ end }}
+		{{ end }}
+
+		{{ block "main" . }} {{ end }}
+
+		{{ block "footer" . }}
+		{{ if .Site.Params.contact }}
+		{{ partial "contact.html" . }}
+		{{ end }}
+
+		{{ partial "footer.html" . }}
+
+		{{ end }}
+
+		{{ block "scripts" . }}
+		{{ partial "js.html" . }}
+		{{ end }}
+
+		{{ template "_internal/google_analytics.html" . }}
+	</body>
+</html>
