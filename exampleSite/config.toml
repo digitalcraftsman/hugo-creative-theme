@@ -58,7 +58,7 @@ googleAnalytics = ""
 		headline = "At your service"
 
         [[params.services.list]]
-            icon = "fa-diamond"
+            icon = "fa-gem"
             title = "Sturdy Templates"
             description = "Our templates are updated regularly so they don't break."
 
@@ -68,7 +68,7 @@ googleAnalytics = ""
 			description = "You can use this theme as is, or you can make changes!"
 
 		[[params.services.list]]
-            icon = "fa-newspaper-o"
+            icon = "fa-newspaper"
             title = "Up to Date"
             description = "We update dependencies to keep things fresh."
 
