@@ -2,7 +2,7 @@
 <section id="contact">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
+            <div class="col-lg-8 offset-lg-2 text-center">
                 {{ with .Site.Params.contact.headline }}
                     <h2 class="section-heading">{{ . }}</h2>
                 {{ end }}
@@ -20,7 +20,7 @@
                 {{ else }}
                     col-lg-8
                 {{ end }}
-                col-lg-offset-2 text-center">
+                offset-lg-2 text-center">
                     <i class="fa fa-phone fa-3x wow bounceIn"></i>
                     <p>{{ .Site.Params.contact.phone }}</p>
                 </div>
@@ -30,7 +30,7 @@
                 {{ if .Site.Params.contact.phone }}
                     col-lg-4
                 {{ else }}
-                    col-lg-8 col-lg-offset-2
+                    col-lg-8 offset-lg-2
                 {{ end }}
                  text-center">
                     <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
