@@ -2,16 +2,14 @@
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         {{ "<!-- Brand and toggle get grouped for better mobile display -->" | safeHTML }}
-        <div class="navbar-header">
+        <div class="navbar-nav">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            {{ with .Site.Params.navigation.brand }}
-                <a class="navbar-brand page-scroll" href="#page-top">{{ . | markdownify }}</a>
-            {{ end }}
+            <a href="#page-top"><img src="img/logo.jpg" alt="image" width="48" height="48"/></a>
         </div>
         {{ "<!-- Collect the nav links, forms, and other content for toggling -->" | safeHTML }}
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
