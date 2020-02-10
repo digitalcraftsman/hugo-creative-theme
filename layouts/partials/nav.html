@@ -39,6 +39,9 @@
                         <a class="page-scroll" href="#contact">{{ .Site.Params.navigation.links.contact }}</a>
                     </li>
                 {{ end }}
+                    <li>
+                        <a class="page-scroll" href= {{ cond (eq (.LanguagePrefix) "/fr") "/en" "fr" }} >{{ cond (eq (.LanguagePrefix) "/fr") "Deutsch" "Française" }}</a>
+                    </li>
             </ul>
         </div>
         {{ "<!-- /.navbar-collapse -->" | safeHTML }}
