@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="#page-top"><img src="img/logo.png" alt="image" width="48" height="48"/></a>
+            <a href="#page-top"><img src="/img/logo.png" alt="image" width="48" height="48"/></a>
         </div>
         {{ "<!-- Collect the nav links, forms, and other content for toggling -->" | safeHTML }}
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -39,6 +39,9 @@
                         <a class="page-scroll" href="#contact">{{ .Site.Params.navigation.links.contact }}</a>
                     </li>
                 {{ end }}
+                    <li>
+                        <a class="page-scroll" href= {{ cond (eq (.LanguagePrefix) "/fr") "/de" "fr" }} >{{ cond (eq (.LanguagePrefix) "/fr") "Deutsch" "Français" }}</a>
+                    </li>
             </ul>
         </div>
         {{ "<!-- /.navbar-collapse -->" | safeHTML }}

@@ -13,7 +13,7 @@
                     <p>{{ . | markdownify }}</p>
                 {{ end }}
             </div>
-            {{ if .Site.Params.contact.facebook }}
+            {{ if .Site.Params.contact.facebook_local }}
                 <div class="
                 {{ if .Site.Params.contact.facebook }}
                     col-lg-4
@@ -22,7 +22,7 @@
                 {{ end }}
                 col-lg-offset-2 text-center">
                     <i class="fa fa-facebook fa-3x wow bounceIn"></i>
-                    <p><a href=https://www.facebook.com/CKKACCACC/>Christliche Klima Aktion (Schweiz)</a></p>
+                    <p><a href=https://www.facebook.com/CKKACCACC/>{{ .Site.Params.contact.facebook_local }}</a></p>
                 </div>
             {{ end }}
             {{ if .Site.Params.contact.email }}
@@ -37,16 +37,12 @@
                     <p><a href="mailto:{{ .Site.Params.contact.email }}">{{ .Site.Params.contact.email }}</a></p>
                 </div>
             {{ end }}
-            {{ if .Site.Params.contact.facebook }}
+            {{ if .Site.Params.contact.facebook_global }}
                 <div class="
-                {{ if .Site.Params.contact.facebook }}
                     col-lg-4
-                {{ else }}
-                    col-lg-8
-                {{ end }}
                 col-lg-offset-2 text-center">
                     <i class="fa fa-facebook fa-3x wow bounceIn"></i>
-                    <p><a href=https://www.facebook.com/christianclimateaction>Christian Climate Action (Global)</a></p>
+                    <p><a href=https://www.facebook.com/christianclimateaction>{{ .Site.Params.contact.facebook_global }}</a></p>
                 </div>
             {{ end }}
         </div>
