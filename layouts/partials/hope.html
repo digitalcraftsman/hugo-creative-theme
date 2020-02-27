@@ -1,0 +1,21 @@
+{{ "<!-- ABOUT -->" | safeHTML }}
+<section class="bg-primary" id="hope">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                {{ with .Site.Params.hope.headline }}
+                    <h2 class="section-heading">{{ . }}</h2>
+                {{ end }}
+                {{ if and .Site.Params.hope.headline .Site.Params.hope.description }}
+                    <hr class="light">
+                {{ end }}
+                {{ with .Site.Params.hope.description }}
+                    <p class="text-faded">{{ . | markdownify }}</p>
+                {{ end }}
+                {{ with .Site.Params.hope.buttonText }}
+                    <a href="mailto:cka-acc@protonmail.ch" class="btn btn-default btn-xl">{{ . }}</a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>

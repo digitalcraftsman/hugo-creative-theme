@@ -32,6 +32,10 @@
             {{ partial "aside.html" . }}
         {{ end }}
 
+        {{ if .Site.Params.hope }}
+            {{ partial "hope.html" . }}
+        {{ end }}
+        
         {{ if .Site.Params.contact }}
             {{ partial "contact.html" . }}
         {{ end }}
