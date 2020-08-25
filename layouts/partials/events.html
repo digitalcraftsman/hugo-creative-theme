@@ -1,18 +1,18 @@
-{{ "<!-- ABOUT -->" | safeHTML }}
-<section id="hope">
+{{ "<!-- events -->" | safeHTML }}
+<section id="events">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                {{ with .Site.Params.hope.headline }}
+                {{ with .Site.Params.events.headline }}
                     <h2 class="section-heading">{{ . }}</h2>
                 {{ end }}
-                {{ if and .Site.Params.hope.headline .Site.Params.hope.description }}
+                {{ if and .Site.Params.events.headline .Site.Params.events.description }}
                     <hr class="primary">
                 {{ end }}
-                {{ with .Site.Params.hope.description }}
+                {{ with .Site.Params.events.description }}
                     <p class="text-muted">{{ . | markdownify }}</p>
                 {{ end }}
-                    <a href= {{ .Site.Params.hope.buttonLink }} class="btn btn-default btn-xl">{{ .Site.Params.hope.buttonText }}</a>
+                    <a href= {{ .Site.Params.events.buttonLink }} class="btn btn-default btn-xl">{{ .Site.Params.events.buttonText }}</a>
                 
             </div>
         </div>
