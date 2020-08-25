@@ -18,8 +18,13 @@
             {{ partial "about.html" . }}
         {{ end }}
 
+
         {{ if .Site.Params.services.list }}
             {{ partial "services.html" . }}
+        {{ end }}
+
+        {{ if .Site.Params.hope }}
+            {{ partial "hope.html" . }}
         {{ end }}
 
         {{ if .Site.Data.projects }}
@@ -34,10 +39,6 @@
             {{ partial "aside.html" . }}
         {{ end }}
 
-        {{ if .Site.Params.hope }}
-            {{ partial "hope.html" . }}
-        {{ end }}
-        
         {{ if .Site.Params.contact }}
             {{ partial "contact.html" . }}
         {{ end }}

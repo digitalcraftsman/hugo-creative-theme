@@ -12,6 +12,8 @@
                 {{ with .Site.Params.hope.description }}
                     <p class="text-faded">{{ . | markdownify }}</p>
                 {{ end }}
+                    <a href= {{ .Site.Params.hope.buttonLink }} class="btn btn-default btn-xl">{{ .Site.Params.hope.buttonText }}</a>
+                
             </div>
         </div>
     </div>
