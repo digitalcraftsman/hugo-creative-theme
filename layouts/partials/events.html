@@ -2,18 +2,19 @@
 <section id="events">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-10 text-center">
                 {{ with .Site.Params.events.headline }}
                     <h2 class="section-heading">{{ . }}</h2>
                 {{ end }}
                 {{ if and .Site.Params.events.headline .Site.Params.events.description }}
                     <hr class="primary">
                 {{ end }}
-                {{ with .Site.Params.events.description }}
-                    <p class="text-muted">{{ . | markdownify }}</p>
+                {{ if .Site.Params.events.imageLink }}
+                <p style="float: left; margin-right: 50px"><img src= {{ .Site.Params.events.imageLink }} height="300px" width="300px"></p>
                 {{ end }}
+                <p style="text-align: left">{{ .Site.Params.events.description | markdownify }}</p>
+
                     <a href= {{ .Site.Params.events.buttonLink }} class="btn btn-default btn-xl">{{ .Site.Params.events.buttonText }}</a>
-                
             </div>
         </div>
     </div>
