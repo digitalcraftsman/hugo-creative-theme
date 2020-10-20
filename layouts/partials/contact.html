@@ -2,7 +2,7 @@
 <section id="contact">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
+            <div class="text-center">
                 {{ with .Site.Params.contact.headline }}
                     <h2 class="section-heading">{{ . }}</h2>
                 {{ end }}
@@ -13,22 +13,37 @@
                     <p>{{ . | markdownify }}</p>
                 {{ end }}
             </div>
+        </div>
+        <!-- TODO switch to bootstrap 4 (supports flexbox, makes our life with centering easier -->
+        <!-- using empty cols to center. This is not ideal, but seems like the best solution in BS3 -->
+        <div class="row">
+            <div class="col-lg-1" style="width:12.5%"></div>
             {{ if .Site.Params.contact.email }}
                 <div class="
-                col-lg-4 col-lg-offset-2 text-center">
+                col-lg-3 col-lg-offset-0 text-center">
                     <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
                     <p>{{ .Site.Params.contact.newsletterText}}<a href="{{ .Site.Params.contact.newsletterSignup }}">email newsletter</a></p>
                 </div>
             {{ end }}
-            
+
             {{ if .Site.Params.contact.email }}
                 <div class="
-                col-lg-4 col-lg-offset-0 text-center">
+                col-lg-3 col-lg-offset-0 text-center">
                     <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
                     <p>{{ .Site.Params.contact.emailText}}<a href="mailto:{{ .Site.Params.contact.email }}">{{ .Site.Params.contact.email }}</a></p>
                 </div>
             {{ end }}
-            
+
+            {{ if .Site.Params.contact.telegram_channel }}
+                <div class="
+                col-lg-3 col-lg-offset-0 text-center">
+                    <!-- TODO upgrade fontawesome, use fab-telegram-plane (looks much nicer) -->
+                    <i class="fa fa-telegram fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p><a href="{{ .Site.Params.contact.telegram_channel }}">{{ .Site.Params.contact.telegramChannelText }}</a></p>
+                </div>
+            {{ end }}
+            <div class="col-lg-1" style="width:12.5%"></div>
+
             {{ if .Site.Params.contact.facebook_local }}
                 <div class="
                   col-lg-4 col-lg-offset-2 text-center">
