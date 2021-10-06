@@ -1,8 +1,9 @@
-baseurl = "https://example.org/"
+baseURL = "http://myexample.com"
 languageCode = "en-us"
 title = "Hugo Creative Theme"
 theme = "hugo-creative-theme"
 googleAnalytics = ""
+Paginate = 3 # Post pagination for the main blog page.
 
 [params]
 
@@ -35,6 +36,7 @@ googleAnalytics = ""
 			about     = "About"
 			services  = "Services"
 			portfolio = "Portfolio"
+			blog      = "Blog"
 			contact   = "Contact"
 
 
@@ -105,3 +107,25 @@ googleAnalytics = ""
 	# 	latitude  = "34.007850"
 	# 	longitude = "-118.499305"
 	# 	maps_api_key = ""
+
+	# Blogging Feature
+	# Comment out to disable the blog completely (links still work unfortunately).
+	# Set sections to false to disable them.
+	 [params.blog]
+	    showHomeSection = true
+	    showHomePosts = true
+	    showHomePostExcerpts = true
+
+	# Footer Navigation
+	[params.footer.nav]
+        [params.footer.nav.terms]
+        text = "Terms & Conditions"
+        link = "http://google.com"
+
+        [params.footer.nav.privacy]
+        text = "Privacy Policy"
+        link = "http://apple.com"
+
+        [params.footer.nav.contact]
+        text = "Privacy Policy"
+        link = "/#contact"

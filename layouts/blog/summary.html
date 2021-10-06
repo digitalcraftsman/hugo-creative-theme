@@ -1,0 +1,15 @@
+<article class="post--summary">
+	<a href="{{ .URL }}" title="{{ .Title }}" class="post__read-more-link--overlay">Link to Post</a>
+	<div class="post__meta">
+		<h2 class="post__meta__title"><a href="{{ .URL }}" title="{{ .Title }}" class="post__read-more-link">{{ .Title }}</a></h2>
+		{{ if or .Date .Author }}
+		<p class="post__meta__byline">
+			{{ if .Params.author }}By {{ .Params.author }} on {{ end }}
+			{{ if .Date }}<time class="tracked" datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00 " }}">{{ .Date.Format "January 2, 2006" }}</time>{{ end }}
+		</p>
+		{{ end }}
+	</div>
+	<div class="post__content">
+		<p>{{ .Summary }} <a href="{{ .URL }}" title="{{ .Title }}" class="post__read-more-link">Read More &rarr;</a></p>
+	</div>
+</article>

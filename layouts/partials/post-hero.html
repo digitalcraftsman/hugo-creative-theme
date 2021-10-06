@@ -1,0 +1,32 @@
+{{ $featured_image := .Params.featured_image }}
+{{ if $featured_image }}
+{{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
+{{ $featured_image := (trim $featured_image "/") | absURL }}
+<header class="header--page" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{{ $featured_image }}');">
+	<div class="header--page__content">
+		<div class="header-content-inner">
+			{{ with .Params.Title }}
+			<p class="header--page__content__title">{{ . | markdownify  }}</p>
+			{{ end }}
+			{{ with .Params.Tagline }}
+			<hr class="header--page__content__divider">
+			<p class="header--page__content__description">{{ . | markdownify }}</p>
+			{{ end }}
+		</div>
+	</div>
+</header>
+{{ else }}
+<header class="header--page header--page--post">
+	<div class="header--page__content">
+		<div class="header-content-inner">
+			{{ with .Params.Title }}
+			<p class="header--page__content__title">{{ . | markdownify  }}</p>
+			{{ end }}
+			{{ with .Description }}
+			<hr class="header--page__content__divider light">
+			<p class="header--page__content__description">{{ . | markdownify }}</p>
+			{{ end }}
+		</div>
+	</div>
+</header>
+{{ end }}
